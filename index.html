@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notepad Clone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li>
+          <a href="#" onclick="toggleMenu(event , 'fileMenu')">File</a>
+          <div class="submenu" id="fileMenu">
+            <a href="#" onclick="newFile()">New</a>
+            <a href="#" onclick="saveFile()">Save</a>
+            <a href="#" onclick="openFile()">Open</a>
+            <a href="#" onclick="clearEditor()">Clear</a>
+          </div>
+        </li>
+        <li>
+          <a href="#" onclick="toggleMenu(event , 'editMenu')">Edit</a>
+          <div class="submenu" id="editMenu">
+            <a href="#" onclick="cutText()">Cut</a>
+            <a href="#" onclick="copyText()">Copy</a>
+            <a href="#" onclick="pasteText()">Paste</a>
+          </div>
+        </li>
+        <li>
+          <a href="#" onclick="toggleMenu(event , 'formatMenu')">Format</a>
+          <div class="submenu" id="formatMenu">
+            <a href="#" onclick="toggleBold()">Bold</a>
+            <a href="#" onclick="toggleItalic()">Italic</a>
+            <a href="#" onclick="toggleUnderline()">Underline</a>
+            <a href="#" onclick="changeFontFamily('Arial')">Arial</a>
+            <a href="#" onclick="changeFontFamily('Courier New')"
+              >Courier New</a
+            >
+            <a href="#" onclick="changeFontFamily('Times New Roman')"
+              >Times New Roman</a
+            >
+            <a href="#" onclick="setFontSize(16)">Small</a>
+            <a href="#" onclick="setFontSize(18)">Medium</a>
+            <a href="#" onclick="setFontSize(24)">Large</a>
+          </div>
+        </li>
+        <li>
+          <a href="#" onclick="toggleMenu(event , 'viewMenu')">View</a>
+          <div class="submenu" id="viewMenu">
+            <a href="#" onclick="toggleFullscreen()">Toggle Fullscreen</a>
+          </div>
+        </li>
+        <li>
+          <a href="#" onclick="toggleMenu(event , 'helpMenu')">Help</a>
+          <div class="submenu" id="helpMenu">
+            <a href="#">About Notepad</a>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <textarea id="editor" class="editor" placeholder="Type here..."></textarea>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
